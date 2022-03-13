@@ -30,10 +30,11 @@
             android:importantForAutofill="no" />
 
         <Button
+            android:id="@+id/find"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="@string/find"
-            android:backgroundTint="@color/black"/>
+            android:backgroundTint="@color/black"
+            android:text="@string/find" />
 
     </LinearLayout>
 
