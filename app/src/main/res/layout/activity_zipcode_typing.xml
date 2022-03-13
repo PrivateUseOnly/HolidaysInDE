@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ZipcodeTypingActivity"
+    android:background="@color/main_theme">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:padding="5dp">
+
+        <EditText
+            android:id="@+id/etZipcode"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/type_postal_code_here"
+            android:inputType="number"
+            android:padding="20dp"
+            android:textColor="@color/white"
+            android:textColorHint="#4CAF50"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:importantForAutofill="no" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/find"
+            android:backgroundTint="@color/black"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
