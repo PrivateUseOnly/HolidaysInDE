@@ -234,7 +234,9 @@ open class CheckPrefix {
             in 22041..22111 -> {
                 answer = hamburg
             }
-
+            22113 -> {
+                answer = "$hamburg, $schleswig: Oststeinbek"
+            }
             else -> answer = invalidZipcode
         }
 
