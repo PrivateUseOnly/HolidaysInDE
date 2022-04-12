@@ -4,7 +4,7 @@
     <string name="_2022">2022</string>
     <string name="type_postal_code_here">Type postal code here</string>
     <string name="find">FIND</string>
-    <string name="main_land">Main Bundesland is: </string>
+    <string name="main_land">This zipcode is from land: </string>
     <string name="second_land">, but there is exception from land: </string>
     <string name="second_land_multi">, but there are exceptions from land: </string>
     <string name="town_exception">and the city is: </string>

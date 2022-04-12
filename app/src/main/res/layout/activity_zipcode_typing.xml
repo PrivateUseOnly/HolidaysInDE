@@ -33,13 +33,13 @@
             android:id="@+id/find"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:backgroundTint="@color/black"
+            android:backgroundTint="@color/white"
             android:text="@string/find" />
 
         <TextView
             android:id="@+id/tvResults"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"/>
 
         <LinearLayout
             android:id="@+id/ll_buttons"
@@ -52,6 +52,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Button"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white"
             android:layout_weight="1"/>
 
         <Button
@@ -59,6 +61,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Button"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white"
             android:layout_weight="1"/>
 
         <Button
@@ -66,6 +70,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Button"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white"
             android:layout_weight="1"/>
         </LinearLayout>
 
