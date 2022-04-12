@@ -4,12 +4,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 
 class ZipcodeTypingActivity : AppCompatActivity() {
 
     private val logicPlz = LogicPLZ()
     private lateinit var etZipCode : EditText
+    private lateinit var tvResult :TextView
     private lateinit var plz : String
     private lateinit var btnFind : Button
 
