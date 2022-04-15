@@ -11,4 +11,21 @@
     <string name="town_exception_multi">and the cities are: </string>
     <string name="show_holidays">Show holidays for </string>
     <string name="back">another Zipcode</string>
+    <string name="baden">Baden-Württemberg</string>
+    <string name="bayern">Bayern</string>
+    <string name="berlin">Berlin</string>
+    <string name="brandenburg">Brandenburg</string>
+    <string name="bremen">Bremen</string>
+    <string name="hamburg">Hamburg</string>
+    <string name="hessen">Hessen</string>
+    <string name="niedersachsen">Niedersachsen</string>
+    <string name="mecklenburg">Mecklenburg-Vorpommern</string>
+    <string name="nrw">Nordrhein-Westfallen</string>
+    <string name="rheinland">Rheinland-Pfalz</string>
+    <string name="saarland">Saarland</string>
+    <string name="sachsen">Sachsen</string>
+    <string name="sachsenAnh">Sachsen-Anhalt</string>
+    <string name="schleswig">Schleswig-Holstein</string>
+    <string name="thuringen">Thüringen</string>
+    <string name="invalid">Invalid zipcode</string>
 </resources>

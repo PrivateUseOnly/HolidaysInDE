@@ -4,8 +4,6 @@ open class CheckZipcode {
 
     private val response = ResponseZipcode()
 
-    private val brandenburg = "Brandenburg"
-    private val sachsen = "Sachsen"
     private val thueringen = "Thüringen"
     private val sachsenAnhalt = "Sachsen-Anhalt"
     private val berlin = "Berlin"
@@ -23,27 +21,28 @@ open class CheckZipcode {
     val invalidZipcode = "Invalid Zipcode"
 
     var exceptionsCityCounter = 0
-    private lateinit var exceptions : String
-    private lateinit var land1: String
-    private lateinit var land2: String
+    lateinit var exceptions : String
+    var land1: Int = 0
+    var land2: Int = 0
 
-    fun checkPrefixZero(checkedZipcode: Int): String {
+    fun checkInPrefixZero(checkedZipcode: Int): Int {
         when (checkedZipcode) {
 
             in 1067..1936 -> {
-                land1 = sachsen
+                //sachsen
+                land1 = R.string.sachsen
             }
 
             in 1945..1998 -> {
-                land1 = brandenburg
+                land1 = R.string.brandenburg
             }
 
             in 2625..2999 -> {
-                land1 = sachsen
+                land1 = R.string.sachsen
             }
 
             in 4103..4579 -> {
-                land1 = sachsen
+                land1 = R.string.sachsen
             }
 
             in 4600..4639 -> {
@@ -51,11 +50,11 @@ open class CheckZipcode {
             }
 
             in 4643..4938 -> {
-                land1 = sachsen
+                land1 = R.string.sachsen
             }
 
             in 4895..4938 -> {
-                land1 = brandenburg
+                land1 = R.string.brandenburg
             }
 
             in 6108..6548 -> {
@@ -78,7 +77,7 @@ open class CheckZipcode {
                 exceptionsCityCounter = 2
                 exceptions = "Langenback, Mühltroff"
                 land1 = thueringen
-                land2 = sachsen
+                land2 = R.string.sachsen
             }
 
             in 7922..7950 -> {
@@ -88,7 +87,7 @@ open class CheckZipcode {
             7952 -> {
                 exceptionsCityCounter = 1
                 land1 = thueringen
-                land2 = sachsen
+                land2 = R.string.sachsen
                 exceptions = "Pausa"
             }
 
@@ -98,7 +97,7 @@ open class CheckZipcode {
             7985 -> {
                 exceptionsCityCounter = 2
                 land1 = thueringen
-                land2 = sachsen
+                land2 = R.string.sachsen
                 exceptions = "Elsterberg, Rentzschmühle"
             }
 
@@ -107,9 +106,9 @@ open class CheckZipcode {
             }
 
             in 8056..9669 -> {
-                land1 = sachsen
+                land1 = R.string.sachsen
             }
-            else -> land1 = invalidZipcode
+            else -> land1 = R.string.invalid
         }
         return when {
             exceptionsCityCounter > 1 -> {
@@ -123,34 +122,34 @@ open class CheckZipcode {
             }
         }
     }
-    fun checkPrefixOne(checkedZipcode: Int): String {
+    fun checkInPrefixOne(checkedZipcode: Int): String {
         when (checkedZipcode) {
             in 10115..12527 -> {
                 land1 = berlin
             }
             12529 -> {
-                land1 = brandenburg
+                land1 = R.string.brandenburg
             }
             in 12555..12623 -> {
                 land1 = berlin
             }
             12625 -> {
-                land1 = brandenburg
+                land1 = R.string.brandenburg
             }
             in 12627..14199 -> {
                 land1 = berlin
             }
             in 14467..14712 -> {
-                land1 = brandenburg
+                land1 = R.string.brandenburg
             }
             14715 -> {
                 exceptionsCityCounter = 8
-                land1 = brandenburg
+                land1 = R.string.brandenburg
                 land2 = sachsenAnhalt
                 exceptions = "Ferchels, Mahlitz, Molkenberg, Neumolkenberg, Neuschollene, Neuwartensleben, Nierow, Schollene"
             }
             in 14727..16949 -> {
-                land1 = brandenburg
+                land1 = R.string.brandenburg
             }
             in 17033..17255 -> {
                 land1 = mecklenburg
@@ -158,25 +157,25 @@ open class CheckZipcode {
             17285 -> {
                 exceptionsCityCounter = 1
                 land1 = mecklenburg
-                land2 = brandenburg
+                land2 = R.string.brandenburg
                 exceptions = "Beenz"
             }
             17259 -> {
                 land1 = mecklenburg
             }
             17268 -> {
-                land1 = brandenburg
+                land1 = R.string.brandenburg
                 land2 = mecklenburg
                 exceptions = "Tackmannshof"
             }
             in 17279..17291 -> {
-                land1 = brandenburg
+                land1 = R.string.brandenburg
             }
             in 17309..17322 -> {
                 land1 = mecklenburg
             }
             17326 -> {
-                land1 = brandenburg
+                land1 = R.string.brandenburg
             }
             in 17328..17335 -> {
                 land1 = mecklenburg
@@ -184,7 +183,7 @@ open class CheckZipcode {
             17337 -> {
                 exceptionsCityCounter = 1
                 land1 = mecklenburg
-                land2 = brandenburg
+                land2 = R.string.brandenburg
                 exceptions = "Uckerland"
             }
             in 17348..19260 -> {
@@ -202,11 +201,11 @@ open class CheckZipcode {
                 land1 = mecklenburg
             }
             in 19309..19348 -> {
-                land1 = brandenburg
+                land1 = R.string.brandenburg
             }
             19357 -> {
                 exceptionsCityCounter = 2
-                land1 = brandenburg
+                land1 = R.string.brandenburg
                 land2 = mecklenburg
                 exceptions = "Dambeck, Klüß"
             }
@@ -214,7 +213,7 @@ open class CheckZipcode {
                 land1 = mecklenburg
             }
             else -> {
-                land1 = invalidZipcode
+                land1 = R.string.invalid
             }
         }
         return when {
@@ -230,7 +229,7 @@ open class CheckZipcode {
         }
     }
 
-    fun checkPrefixTwo(checkedZipcode: Int): String {
+    fun checkInPrefixTwo(checkedZipcode: Int): String {
         when (checkedZipcode) {
             in 20095..21037 -> {
                 land1 = hamburg
@@ -315,7 +314,7 @@ open class CheckZipcode {
             in 29439..29699 -> {
                 land1 = niedersachsen
             }
-            else -> land1 = invalidZipcode
+            else -> land1 = R.string.invalid
         }
 
         return when {
@@ -331,7 +330,7 @@ open class CheckZipcode {
         }
     }
 
-    fun checkPrefixThree(checkedZipcode: Int): String {
+    fun checkInPrefixThree(checkedZipcode: Int): String {
         when (checkedZipcode) {
             in 30159..31868 -> {
                 land1 = niedersachsen
@@ -405,7 +404,7 @@ open class CheckZipcode {
             in 38820..39649 -> {
                 land1 = sachsenAnhalt
             }
-            else -> land1 = invalidZipcode
+            else -> land1 = R.string.invalid
         }
         return when {
             exceptionsCityCounter > 1 -> {
@@ -420,7 +419,7 @@ open class CheckZipcode {
         }
     }
 
-    fun checkPrefixFour(checkedZipcode: Int): String {
+    fun checkInPrefixFour(checkedZipcode: Int): String {
         when (checkedZipcode) {
             in 40210..48432 -> {
                 land1 = nrw
@@ -458,7 +457,7 @@ open class CheckZipcode {
             in 49565..49849 -> {
                 land1 = niedersachsen
             }
-            else -> land1 = invalidZipcode
+            else -> land1 = R.string.invalid
         }
         return when {
             exceptionsCityCounter > 1 -> {
@@ -473,7 +472,7 @@ open class CheckZipcode {
         }
     }
 
-    fun checkPrefixFive(checkedZipcode: Int):String {
+    fun checkInPrefixFive(checkedZipcode: Int):String {
         when(checkedZipcode) {
             50126 -> {
                 land1 = rheinland
@@ -517,7 +516,7 @@ open class CheckZipcode {
                 land2 = hessen
                 exceptions = "Bromskirchen"
             }
-            else -> land1 = invalidZipcode
+            else -> land1 = R.string.invalid
         }
         return when {
             exceptionsCityCounter > 1 -> {
@@ -532,7 +531,7 @@ open class CheckZipcode {
         }
     }
 
-    fun checkPrefixSix(chechedZipcode: Int):String {
+    fun checkInPrefixSix(chechedZipcode: Int):String {
         when(chechedZipcode) {
             in 60308..63699 -> {
                 land1 = hessen
@@ -667,7 +666,7 @@ open class CheckZipcode {
                 land1 = hessen
             }
             else -> {
-                land1 = invalidZipcode
+                land1 = R.string.invalid
             }
         }
         return when {
@@ -683,7 +682,7 @@ open class CheckZipcode {
         }
     }
 
-    fun checkPrefixSeven(checkedZipcode: Int): String {
+    fun checkInPrefixSeven(checkedZipcode: Int): String {
         when(checkedZipcode) {
             in 70173..74592 -> {
                 land1 = baden
@@ -704,7 +703,7 @@ open class CheckZipcode {
                 land1 = baden
             }
             else -> {
-                land1 = invalidZipcode
+                land1 = R.string.invalid
             }
         }
         return when {
@@ -720,7 +719,7 @@ open class CheckZipcode {
         }
     }
 
-    fun checkPrefixEight(checkedZipcode: Int): String {
+    fun checkInPrefixEight(checkedZipcode: Int): String {
         when(checkedZipcode) {
             in 80331..87789 -> {
                 land1 = bayern
@@ -772,7 +771,7 @@ open class CheckZipcode {
         }
     }
 
-    fun checkPrefixNine(checkedZipcode: Int): String {
+    fun checkInPrefixNine(checkedZipcode: Int): String {
         when(checkedZipcode) {
             in 90402..96489 -> {
                 land1 = bayern
@@ -807,7 +806,7 @@ open class CheckZipcode {
             in 98527..99998 -> {
                 land1 = thueringen
             }
-            else -> land1 = invalidZipcode
+            else -> land1 = R.string.invalid
         }
         return when {
             exceptionsCityCounter > 1 -> {

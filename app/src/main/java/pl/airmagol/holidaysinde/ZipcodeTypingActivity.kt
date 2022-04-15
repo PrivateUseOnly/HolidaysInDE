@@ -8,12 +8,15 @@ import android.widget.TextView
 
 class ZipcodeTypingActivity : AppCompatActivity() {
 
-    private val logicPlz = CheckPrefix()
+    private val checkPrefix = CheckPrefix()
+    private val checkZipcode = CheckZipcode()
     private lateinit var etZipCode : EditText
     private lateinit var tvResult :TextView
     private lateinit var plz : String
     private lateinit var btnFind : Button
     private lateinit var answer : String
+    private lateinit var btnLand1 : Button
+    private lateinit var btnLand2 : Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,15 +26,31 @@ class ZipcodeTypingActivity : AppCompatActivity() {
         etZipCode = findViewById(R.id.etZipcode)
         btnFind = findViewById(R.id.find)
         tvResult = findViewById(R.id.tvResults)
+        btnLand1 = findViewById(R.id.btn_land1)
+        btnLand2 = findViewById(R.id.btn_land2)
 
 
 
         btnFind.setOnClickListener {
-            plz = etZipCode.text.toString()
-            if(plz.isNotEmpty()){
-                answer = logicPlz.findLand(plz)
-                tvResult.text = answer
-            }
+            validateZipcode()
+  //          if(answer.isNotEmpty()){
+  //              btnLand1.text = checkZipcode.land1
+  //          }
         }
+
+            //btnLand1.setOnClickListener { showHolidaysLand1()}
+
+    }
+
+    private fun showHolidaysLand1() {
+        TODO("Not yet implemented")
+    }
+
+    private fun validateZipcode(){
+        plz = etZipCode.text.toString()
+        if(plz.isNotEmpty()){
+            answer = checkPrefix.findLand(plz)
+            tvResult.text = answer
+            }
     }
 }
