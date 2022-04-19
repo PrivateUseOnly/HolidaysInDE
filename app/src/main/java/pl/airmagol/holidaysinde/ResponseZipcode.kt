@@ -6,15 +6,15 @@ class ResponseZipcode {
     private val butThereAreExceptions = "but there are: "
     private val inLand = "are in Land: "
 
-    fun withoutExceptions(land1 : Int) : String {
+    fun withoutExceptions(land1 : String) : String {
         return "$zipcodeInLand $land1"
     }
 
-    fun withOneException(land1: Int, land2: Int, city: String):String{
+    fun withOneException(land1: String, land2: String, city: String):String{
         return "$zipcodeInLand $land1 $isAnException $city $inLand: $land2"
     }
 
-    fun withMoreExceptions(land1: Int, land2: Int, cities: String) : String{
+    fun withMoreExceptions(land1: String, land2: String, cities: String) : String{
         return "$zipcodeInLand $land1 $butThereAreExceptions $cities $inLand: $land2"
     }
 }
@@ -110,9 +110,9 @@ class ResponseHolidays {
     }
 
     private fun berlinHolidays() : String {
-       return consNeuJahrAll+consWomensDay+moKarFreitagAll+moOsterMontagAll+
-               consTagDerArbeitAll+moChristiHimmelfahrtAll+moPfingstMontagAll+
-               consTagDerDeutscherEinheitAll+xmasAll
+        return consNeuJahrAll+consWomensDay+moKarFreitagAll+moOsterMontagAll+
+                consTagDerArbeitAll+moChristiHimmelfahrtAll+moPfingstMontagAll+
+                consTagDerDeutscherEinheitAll+xmasAll
     }
 
     private fun brandenburgHolidays() : String{
@@ -190,6 +190,6 @@ class ResponseHolidays {
     private fun thuringenHolidays() : String {
         return consNeuJahrAll+moKarFreitagAll+moOsterMontagAll+consTagDerArbeitAll+
                 moChristiHimmelfahrtAll+moPfingstMontagAll+exceptonsFronleichnamThuringen+
-                consTagDerDeutscherEinheitAll+consReformationsTag+xmasAll
+                consWeltKindTag+consTagDerDeutscherEinheitAll+consReformationsTag+xmasAll
     }
 }

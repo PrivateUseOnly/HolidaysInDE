@@ -24,8 +24,9 @@
     <string name="rheinland">Rheinland-Pfalz</string>
     <string name="saarland">Saarland</string>
     <string name="sachsen">Sachsen</string>
-    <string name="sachsenAnh">Sachsen-Anhalt</string>
+    <string name="sachsenAnhalt">Sachsen-Anhalt</string>
     <string name="schleswig">Schleswig-Holstein</string>
     <string name="thuringen">Thüringen</string>
     <string name="invalid">Invalid zipcode</string>
+
 </resources>
